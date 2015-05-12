@@ -11,7 +11,7 @@ location='peking'
 
 sendEmail="/usr/sbin/sendEmail -f ${mail_from} -s ${smtp_server} -t $NOTIFY_CONTACTEMAIL -xu ${mail_user} -xp ${mail_password} -o message-charset=utf-8 -o tls=auto"
 
-PRINTSERV="echo -en ${location} $NOTIFY_HOSTALIAS $NOTIFY_SERVICEDESC is $NOTIFY_SERVICESTATE\nIP: $NOTIFY_HOSTADDRESS\nDate: $NOTIFY_SHORTDATETIME\nMessage: $NOTIFY_SERVICEOUTPUT\n"
+PRINTSERV="echo -en ${location} $NOTIFY_HOSTALIAS $NOTIFY_SERVICEDESC is $NOTIFY_SERVICESTATE\nIP: $NOTIFY_HOSTADDRESS\nDate: $NOTIFY_SHORTDATETIME\nMessage: $NOTIFY_SERVICEOUTPUT\n$NOTIFY_LONGSERVICEOUTPUT\n"
 
 PRINTHOST="echo -en ${location} $NOTIFY_HOSTALIAS is $NOTIFY_HOSTSTATE\nIP:$NOTIFY_HOSTADDRESS\nDate: $NOTIFY_SHORTDATETIME\nMessage: $NOTIFY_HOSTOUTPUT\n"
 
