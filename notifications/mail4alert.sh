@@ -9,7 +9,7 @@ mail_user="user_name"
 mail_password="user_password"
 location='peking'
 
-sendEmail="/usr/sbin/sendEmail -f ${mail_from} -s ${smtp_server} -t $NOTIFY_CONTACTEMAIL -xu ${mail_user} -xp ${mail_password} -o message-charset=utf-8 -o timeout=5"
+sendEmail="/usr/sbin/sendEmail -f ${mail_from} -s ${smtp_server} -t $NOTIFY_CONTACTEMAIL -xu ${mail_user} -xp ${mail_password} -o message-charset=utf-8 -o tls=auto"
 
 PRINTSERV="echo -en ${location} $NOTIFY_HOSTALIAS $NOTIFY_SERVICEDESC is $NOTIFY_SERVICESTATE\nIP: $NOTIFY_HOSTADDRESS\nDate: $NOTIFY_SHORTDATETIME\nMessage: $NOTIFY_SERVICEOUTPUT\n"
 
