@@ -3,17 +3,25 @@ Check_MK
 
 ##一、什么是OMD
 ###OMD的全称是The Open Monitoring Distribution，
+
 官方网址是：http://omdistro.org/start
 大家可以看看官方的团队介绍：
 从左至右Lars Michelsen (NagVis), Wolfgang Barth (author of “Nagios. System- und Netzwerk-Monitoring”), Ge
-rhard Lauer (Nagios - Das Praxisbuch), Mathias Kettner (Check_MK, Livestatus), Jrg Linge (pnp4nagios), Sven Nierlein (Thruk) and Stefan Hsl. 其团队成员可以说都是业内的重量级人物。
+rhard Lauer (Nagios - Das Praxisbuch), Mathias Kettner (Check_MK, Livestatus), Jrg Linge (pnp4nagios), 
+Sven Nierlein (Thruk) and Stefan Hsl. 其团队成员可以说都是业内的重量级人物。
 
 ###从团队核心成员大家可以清楚的了解OMD监控系统的主要组成部分：
+
 1、以Nagios为核心，用于任务的调度。
+
 2、Check MK是基于Nagios的一个强力的扩展程序，接替Nagios负责数据采集和web管理（nagios只做任务调度），集成了众多的监控插件/模板并支持目前主流的操作系统（Windows、Centos、Debian、FreeBSD等）。
+
 3、通过pnp4nagios和RDDtool进行监控项目的绘图
+
 4、通过NagVis和Thruk进行设备和网络拓扑的展示
+
 ##二、查看Check MK演示
+
 如果大家想感受一下Check MK，官方有一个展示Demo：
 
 网址：http://demo.mathias-kettner.de/demo/check_mk/
