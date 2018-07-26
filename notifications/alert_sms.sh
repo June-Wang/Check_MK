@@ -1,6 +1,5 @@
 #!/bin/bash
-# SMS FOR LEFU Peking
-# Author: Alex wang Email:qq5910225@gmail.com
+# sms peking
 
 export LANG=en_US.UTF-8
 
@@ -12,9 +11,9 @@ PRINTHOST="$NOTIFY_HOSTALIAS is $NOTIFY_HOSTSTATE|IP:$NOTIFY_HOSTADDRESS|Date: $
 #exit 0
 
 if [ "$NOTIFY_WHAT" == "SERVICE" ]; then
-# For Service notification
-        ${java_bin} ${java_opt} "$NOTIFY_CONTACTPAGER" "`echo ${PRINTSERV}|grep -oP '^.{1,250}'`"
-# For Host notification
+    # For Service notification
+    ${java_bin} ${java_opt} "$NOTIFY_CONTACTPAGER" "`echo ${PRINTSERV}|grep -oP '^.{1,250}'`"
 else
-        ${java_bin} ${java_opt} "$NOTIFY_CONTACTPAGER" "${PRINTHOST}"
+    # For Host notification
+    ${java_bin} ${java_opt} "$NOTIFY_CONTACTPAGER" "${PRINTHOST}"
 fi
