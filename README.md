@@ -4,6 +4,9 @@ Check MK 安装文档
 ### Quick Start ###
 1.配置ConSol Labs源:
 ```
+gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
+gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
+wget -q "https://labs.consol.de/repo/stable/RPM-GPG-KEY" -O - | sudo apt-key add -
 echo "deb http://labs.consol.de/repo/stable/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/labs-consol-stable.list
 apt-get update
 ```
