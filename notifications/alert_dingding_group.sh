@@ -25,7 +25,7 @@ else
     msg=${PRINTHOST}
 fi
 
-token_url='https://oapi.dingtalk.com/robot/send?access_token=ea723ca5419a7f3084aa7b4c103aa0160a105385a3f9af9a5d5994f992876d6a'
+token_url='https://oapi.dingtalk.com/robot/send?access_token=XXX'
 curl "${token_url}" \
    -H 'Content-Type: application/json' \
    -d "{'msgtype': 'text', 
