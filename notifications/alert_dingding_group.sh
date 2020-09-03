@@ -1,5 +1,7 @@
 #!/bin/bash
-#Send msg by dingding Group
+#Send msg to dingding Group
+
+token_url='https://oapi.dingtalk.com/robot/send?access_token=XXX'
 
 export LANG=en_US.UTF-8
 
@@ -25,7 +27,6 @@ else
     msg=${PRINTHOST}
 fi
 
-token_url='https://oapi.dingtalk.com/robot/send?access_token=XXX'
 curl "${token_url}" \
    -H 'Content-Type: application/json' \
    -d "{'msgtype': 'text', 
